@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="showDate()">
+    <h1 id="main_heading">events</h1>
+    
+    
+
+    <script>
+        function change_text(){
+            var main_heading = document.getElementById('main_heading');
+            main_heading.innerHTML = "jounery to software development";
+        } 
+
+        function showDate (){
+           var time = document.getElementById("time");
+           time.innerHTML = Date();
+        }
+        function clearDate (){
+           var time = document.getElementById('time');
+           time.innerHTML = '';
+        }
+    </script>
+    
+        <!-- <input type="text" placeholder="fname"><br><br>
+        <input type="password" placeholder="password"><br><br> -->
+         
+        <!-- <button onclick=showDate()>submit</button> -->
+        <button onclick="change_text()" 
+                onmouseout="clearDate()" 
+                onmouseover="showDate()"
+        >submit
+    </button>
+    <h1 id="time"></h1>
+</body>
+</html>

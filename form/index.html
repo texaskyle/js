@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body" >
+    <label>Background</label>
+    <select name="Background" id="Background" onchange="changeBackground(this)">
+        <option value="blue">blue</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="brown">brown</option>
+    </select>
+    <br><br>
+    <br>
+    <p id="p_color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil quos commodi reiciendis
+        quam dolore, eaque
+        deleniti esse est quidem veniam cupiditate sed nam modi consectetur nostrum, aut error vero.</p>
+
+    <form action="#" name="login" method="post" onsubmit="return validateForm()">
+        <input type="text" name="fname" placeholder="First name"><br><br>
+        <input type="text" name="pwd" placeholder="password"><br><br>
+        <button>submit</button>
+    </form>
+
+    <script>
+
+        function validateForm(){
+            var fname = document.forms["login"]["fname"].value;
+            if (fname == null || fname == "") {
+                alert("first name required");
+                return false;
+                
+            }
+
+            var pwd = document.forms["login"]["pwd"].value;
+            if(pwd.length < 4){
+                alert("password must be more than four characters");
+            }else{
+                alert("all things good");
+            }
+        }
+
+
+
+
+
+
+        function changeBackground(x){
+            // console.log(x.value);
+            var body =  document.getElementById("body");
+            body.style.background = x.value;
+        }
+
+        /* function  changeBackground(x){
+          var p_color =  document.getElementById("p_color");
+          p_color.style.color = x.value;
+        } */
+    </script>
+</body>
+</html>

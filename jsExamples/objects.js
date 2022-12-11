@@ -31,3 +31,14 @@ apple.describe = function() {
     return 'an apple is of the color, '+this.color+', it\'s of the shape '+this.shape+' it\'s of the status '+this.status+' ';
 }
 console.log(apple.describe());
+
+function fruits(name, shape, color){
+    this.name = name;
+    this.shape = shape;
+    this.color = color;
+}
+ var apple = new fruits("apple", "shape", "color");
+ console.log(apple);
+
+ var melon = new fruits("melon", "oval", "green");
+ console.log(melon);
