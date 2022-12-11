@@ -1,0 +1,33 @@
+
+<script>let movies = {
+        title: "Into the badlands",
+        episode: 10,
+        minutes: 45,
+        iswatched: true
+    };
+    // console.log(movies);
+    // console.log(movies.title);
+
+    // creating a class
+    class series {
+        constructor(title,duration,iswatched){
+            this.title = title;
+            this.duration = duration;
+            this.iswatched = iswatched;
+        }
+    }
+// creating new instance of classes
+let series1 = new series("money heist", "7 hours", true);
+let series2 = new series("submission", "3hrs 30min", false);
+let series3 = new series("money heist", "4 hrs", true);
+
+// this instances of classes can be put inside an array
+let seriesArray = [series1, series2, series3];
+
+// console.log(series1);
+console.log(seriesArray[1]);
+
+    </script>
+
+
+

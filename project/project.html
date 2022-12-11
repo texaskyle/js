@@ -1,0 +1,32 @@
+<script>
+    class movies{
+        constructor(title, duration, minutesWatched){
+            this.title = title;
+            this.duration = duration;
+            
+      
+    if (minutesWatched === duration) {
+        this.isWatched = "finished watching";
+        // this.continueWatching = false;
+    } else if ( minutesWatched > 0 && minutesWatched < duration) {
+        // this.isWatched = false;
+        this.continueWatching = "continue watching this movie";
+    } else if (minutesWatched === 0 && minutesWatched < duration) {
+        this.isWatched = "not yet watched";
+        // this.continueWatching = "start watching this movie";
+    }else{
+        console.log("not yet subscribed to any movie");
+            }
+        }
+    }
+
+    let movie1 = new movies("god of war", 45, 45);
+    let movie2 = new movies("black panther", 50, 20);
+    let movie3 = new movies("old guard", 40, 30);
+    let movie4 = new movies("venom", 50, 0);
+
+    console.log(movie1);
+    console.log(movie4);
+    console.log(movie2);
+    console.log(movie3);
+</script>
